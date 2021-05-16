@@ -15,9 +15,11 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Автор</th>
                         <th scope="col">Заголовок</th>
-                        <th scope="col">Назва</th>
+                        <th scope="col">Автор</th>
+                        <th scope="col">Добавлен</th>
+                        <th scope="col">Изменен</th>
+                        <th scope="col">Действия</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,9 +27,11 @@
                         @foreach($items as $item)
                             <tr>
                                 <th scope="row">{{ $item->id }}</th>
-                                <td>{{ $item->author }}</td>
                                 <td>{{ $item->title }}</td>
-                                <td>{{ $item->content }}</td>
+                                <td>{{ $item->author }}</td>
+                                <td>{{ $item->created_at }}</td>
+                                <td>{{ $item->updated_at }}</td>
+                                <td></td>
                             </tr>
                         @endforeach
                     @else
