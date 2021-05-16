@@ -29,7 +29,7 @@
                                 <td>{{ $item->title }}</td>
                                 <td>{{ $item->content }}</td>
                             </tr>
-                        @endforeach;
+                        @endforeach
                     @else
                         <tr aria-colspan="4">
                             <td colspan="4">Записи відсутні...</td>
