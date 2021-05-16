@@ -13,8 +13,8 @@
                     Записи
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Список записів</a>
-                    <a class="dropdown-item" href="{{ route('site') }}">Створити запис</a>
+                    <a class="dropdown-item" href="{{ route('admin.post.index') }}">Список записів</a>
+                    <a class="dropdown-item" href="{{ route('admin.post.create') }}">Створити запис</a>
                 </div>
             </li>
         </ul>

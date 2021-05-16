@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SiteController;
+use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Admin\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,14 @@ use App\Http\Controllers\SiteController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Роути фронтенда
+ */
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/site', [SiteController::class, 'index'])->name('site');
-Route::post('/site', [SiteController::class, 'post'])->name('site');
+/**
+ * Роути адмінки
+ */
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('post', PostController::class);
+});
