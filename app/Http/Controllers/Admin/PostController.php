@@ -20,7 +20,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $items = Post::all();
+        $items = Post::paginate(10);
 
         return view('templates.admin.post.index', [
             'items' => $items

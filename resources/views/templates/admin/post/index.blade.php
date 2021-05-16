@@ -38,5 +38,6 @@
                 </tbody>
             </table>
         </div>
+        {{ $items->links() }}
     </div>
 @endsection
