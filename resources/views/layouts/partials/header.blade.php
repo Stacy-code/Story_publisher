@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-warning text-dark">
     <a class="navbar-brand" href="/">Бренд</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,14 +8,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/') }}">Головна</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Записи
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('admin.post.index') }}">Список записів</a>
-                    <a class="dropdown-item" href="{{ route('admin.post.create') }}">Створити запис</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/stories') }}"><strong>Історії</strong></a>
             </li>
         </ul>
     </div>

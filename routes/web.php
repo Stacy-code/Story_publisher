@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Frontend\StoriesController;
 
 
 /*
@@ -20,10 +21,8 @@ use App\Http\Controllers\Admin\PostController;
  * Роути фронтенда
  */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/stories', [StoriesController::class, 'index'])->name('stories');
+Route::get('/stories/create', [StoriesController::class, 'create']);
 
-/**
- * Роути адмінки
- */
-Route::prefix('admin')->name('admin.')->group(function () {
-    Route::resource('post', PostController::class);
-});
+Route::post('/stories/create', [StoriesController::class, 'save'])->name('createstory');
+

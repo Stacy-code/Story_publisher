@@ -1,5 +1,5 @@
 @extends('layouts.default')
 @section('title', 'Site')
 @section('content')
-    <h1>Головна сторінка</h1>
+    <img class=" w-100" src="/public/images/home.jpg" alt="">
 @endsection
