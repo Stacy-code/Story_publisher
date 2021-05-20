@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="290e3f4f-6bb1-4a81-b49a-d58fe9424c75" name="Default Changelist" comment="add mailing, refresh dom elem, ajax request">
-      <change afterPath="$PROJECT_DIR$/app/Models/Story.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/templates/frontend/createstory.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/templates/frontend/stories.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/templates/admin/post/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/templates/admin/post/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/templates/frontend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/frontend/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="290e3f4f-6bb1-4a81-b49a-d58fe9424c75" name="Default Changelist" comment="list of stories, create story, save in BD" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +174,7 @@
       <workItem from="1621321707330" duration="23279000" />
       <workItem from="1621352214654" duration="8643000" />
       <workItem from="1621510346075" duration="22000" />
-      <workItem from="1621510370632" duration="12809000" />
+      <workItem from="1621510370632" duration="13352000" />
     </task>
     <task id="LOCAL-00001" summary="Added delete, edit and confirm">
       <created>1621343239684</created>
@@ -203,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621362037905</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="list of stories, create story, save in BD">
+      <created>1621528702773</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621528702774</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +218,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added delete, edit and confirm" />
     <MESSAGE value="add mailing, refresh dom elem, ajax request" />
-    <option name="LAST_COMMIT_MESSAGE" value="add mailing, refresh dom elem, ajax request" />
+    <MESSAGE value="list of stories, create story, save in BD" />
+    <option name="LAST_COMMIT_MESSAGE" value="list of stories, create story, save in BD" />
   </component>
 </project>
