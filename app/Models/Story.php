@@ -30,4 +30,9 @@ class Story extends Model
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
+
+    public function rateOneByFileName(string $id, string $type): bool
+    {
+        return true;
+    }
 }

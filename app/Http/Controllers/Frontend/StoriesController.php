@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class StoriesController extends Controller
 {
+
+    /**
+     * @var Story $model
+     */
+    public $model;
+
     /**
      * @return mixed
      */
@@ -54,5 +60,35 @@ class StoriesController extends Controller
         return $result
             ? redirect()->route('stories')
             : back()->withInput();
+    }
+
+    public function actionRate(): void
+    {
+        $result = [
+            'success' => false,
+            'msg' => 'Не вдалося проголосувати!'
+        ];
+
+        if($_COOKIE['rate']['id'] === $_POST['id']){
+            $result = [
+                'success' => false,
+                'msg' => 'Не вдалося проголосувати!'
+            ];
+        }
+        else{
+            if (isset($_POST['id'])) {
+
+                $result['success'] = Story::rateOneByFileName((string)$_POST['id'],(string)$_POST['button_type']);
+                $result['msg'] = 'Ви проголосували!';
+
+                setcookie("rate[id]", $_POST['id']);
+
+            }
+        }
+
+        echo json_encode($result);
+
+
+
     }
 }
