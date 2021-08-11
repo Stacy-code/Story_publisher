@@ -62,33 +62,68 @@ class StoriesController extends Controller
             : back()->withInput();
     }
 
-    public function actionRate(): void
+
+
+
+    public function rate(Request $request)
     {
         $result = [
             'success' => false,
             'msg' => 'Не вдалося проголосувати!'
         ];
 
-        if($_COOKIE['rate']['id'] === $_POST['id']){
+
+        $rateId = $request->cookie('rate.id');
+
+
+        if($rateId === $request->post('id')){
             $result = [
                 'success' => false,
                 'msg' => 'Не вдалося проголосувати!'
             ];
         }
         else{
-            if (isset($_POST['id'])) {
+            if (!empty($request->post('id'))) {
 
-                $result['success'] = Story::rateOneByFileName((string)$_POST['id'],(string)$_POST['button_type']);
-                $result['msg'] = 'Ви проголосували!';
+                $storyModel = Story::where('id', $request->post('id'))->first();
 
-                setcookie("rate[id]", $_POST['id']);
+                if($storyModel instanceof Story){
+                    $rateId = cookie('rate.id', $request->post('id'));
 
+                    try {
+                        switch ($request->post('button_type')){
+                            case 'like' :
+
+                                $storyModel->like_count += 1;
+                                $storyModel->save();
+                                $result['msg'] = 'Ви поставили лайк!';
+                                $result['success'] = true;
+                                $result['count'] = $storyModel->like_count;
+                                break;
+                            case 'dislike' :
+                                $storyModel->dislike_count += 1;
+                                $storyModel->save();
+                                $result['msg'] = 'Ви поставили дизлайк!';
+                                $result['success'] = true;
+                                $result['count'] = $storyModel->dislike_count;
+                                break;
+                        }
+                    }
+                    catch (\Exception $e){
+                        dd($e->getMessage());
+                    }
+
+
+                }
+                else{
+                    $result['msg'] = 'Записи не существует!';
+                }
             }
         }
 
-        echo json_encode($result);
 
 
+        return response()->json($result);
 
     }
 }

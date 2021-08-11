@@ -23,6 +23,6 @@ use App\Http\Controllers\Frontend\StoriesController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/stories', [StoriesController::class, 'index'])->name('stories');
 Route::get('/stories/create', [StoriesController::class, 'create']);
-
+Route::post('/stories/rate' , [StoriesController::class, 'rate']);
 Route::post('/stories/create', [StoriesController::class, 'save'])->name('createstory');
 

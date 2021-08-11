@@ -20,7 +20,7 @@ class Story extends Model
      * @var array $fillable
      */
     protected $fillable = [
-        'author', 'email', 'title', 'content'
+        'author', 'email', 'title', 'content', 'like_count', 'dislike_count'
     ];
 
     /**
@@ -31,8 +31,5 @@ class Story extends Model
         'updated_at' => 'datetime',
     ];
 
-    public function rateOneByFileName(string $id, string $type): bool
-    {
-        return true;
-    }
+
 }

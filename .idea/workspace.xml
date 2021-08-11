@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="290e3f4f-6bb1-4a81-b49a-d58fe9424c75" name="Default Changelist" comment="list of stories, create story, save in BD">
-      <change beforePath="$PROJECT_DIR$/.idea/laravel.local.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.local.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="290e3f4f-6bb1-4a81-b49a-d58fe9424c75" name="Default Changelist" comment="update migration, add like and dislike button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/StoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/StoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_20_130024_create_story_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Story.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/templates/frontend/stories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/frontend/stories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +187,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../callback" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -197,6 +200,7 @@
       <recent name="C:\OpenServer\domains\localhost\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\localhost\public" />
       <recent name="C:\OpenServer\domains\localhost\app\Http\Controllers\Frontend" />
       <recent name="C:\OpenServer\domains\localhost\app\Http\Controllers\Admin" />
     </key>
@@ -224,7 +228,14 @@
       <workItem from="1623762638492" duration="18000" />
       <workItem from="1623762658250" duration="1324000" />
       <workItem from="1623934844176" duration="21000" />
-      <workItem from="1624112388095" duration="3667000" />
+      <workItem from="1624112388095" duration="3989000" />
+      <workItem from="1624559856927" duration="50000" />
+      <workItem from="1624632903854" duration="156000" />
+      <workItem from="1624799989511" duration="167000" />
+      <workItem from="1624880427576" duration="13000" />
+      <workItem from="1627650672520" duration="326000" />
+      <workItem from="1628669045873" duration="2802000" />
+      <workItem from="1628693771104" duration="4637000" />
     </task>
     <task id="LOCAL-00001" summary="Added delete, edit and confirm">
       <created>1621343239684</created>
@@ -247,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621528702774</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update migration, add like and dislike button">
+      <created>1624116396165</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624116396165</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +287,7 @@
     <MESSAGE value="Added delete, edit and confirm" />
     <MESSAGE value="add mailing, refresh dom elem, ajax request" />
     <MESSAGE value="list of stories, create story, save in BD" />
-    <option name="LAST_COMMIT_MESSAGE" value="list of stories, create story, save in BD" />
+    <MESSAGE value="update migration, add like and dislike button" />
+    <option name="LAST_COMMIT_MESSAGE" value="update migration, add like and dislike button" />
   </component>
 </project>
